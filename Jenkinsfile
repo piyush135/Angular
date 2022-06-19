@@ -11,7 +11,7 @@ pipeline {
             steps {
                pwsh(script: 'docker images -a')
               pwsh(script: """
-                cd Angular/
+                cd src/
                 docker images -a
                 docker build -t jenkins-pipeline .
                 cd..
